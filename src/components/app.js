@@ -1,13 +1,18 @@
 import React from 'react';
-import '../assets/css/app.css';
-import logo from '../assets/images/logo.svg';
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize';
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import Header from './header.js';
+import Nav from './nav.js'
 
 const App = () => (
     <div>
-        <div className="app">
-            <img src={logo} className="logo rotate"/>
-            <h1>Welcome to React</h1>
-        </div>
+        <Nav/>
+    <Router>
+        <Switch>
+            <Route exact path="/" component={Header}/>
+        </Switch>
+    </Router>
     </div>
 );
 

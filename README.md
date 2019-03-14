@@ -1,6 +1,6 @@
-# React Starter
+# Portfolio
 
-> This repo contains boilerplate code to aid in the creation of a new React app with Redux. Follow the below setup instructions to get started.
+> This repo contains my latest work and background information.
 
 ### Setup Instructions
 

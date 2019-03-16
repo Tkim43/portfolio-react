@@ -1,19 +1,80 @@
-import React,{Component} from 'react';
-import {Link} from 'react-router-dom'
+import React,{Component, Fragment} from 'react';
+import {Link} from 'react-router-dom';
 
 class Nav extends Component{
+    state={
+        common:[
+            {
+                text: 'Home',
+                to: '/'
+            },
+            // {
+            //     text: 'About',
+            //     to: '/'
+            // },
+            // {
+            //     text: 'Education',
+            //     to: '/'
+            // },
+            // {
+            //     text: 'Projects',
+            //     to: '/'
+            // },
+            // {
+            //     text: 'Interest',
+            //     to: '/'
+            // },
+            // {
+            //     text: 'Contact',
+            //     to: '/'
+            // },
+        ]
+    }
+    buildLink(link){
+        return (
+        <li className="nav-item" key={link.to}>
+            <Link to={link.to}>{link.text}</Link>
+        </li>);
+    }
+    // toggleVisible=()=>{
+    //     this.setState({
+    //         visible: !this.state.visible
+    //     })
+    // }
+    // openNav=()=>{
+        
+        // if(this.state.visible){
+        //     document.addEventListener('click', this.handleOutsideClick, false);
+        // } else {
+        //     document.removeEventListener('click', this.handleOutsideClick, false);
+        // }
+        // this.toggleVisible
+        // document.getElementById("mySidenav").style.width="258px";
+        // document.body.style.background = "rgba(0,0,0,0.4)";
+    // }
+    renderLinks= ()=>{
+        const {common} =this.state
+        const commonLinks = common.map(this.buildLink);
+        return[...commonLinks];
+    }
+    // handleOutsideClick=()=>{
+    //     if (document.getElementById("mySidenav")) {
+    //         return;
+    //     }
+    // }
     render(){
         return(
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" className="brand-logo">Logo</a>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                {/* <li><Link to="/" >Sass</Link></li> */}
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
-                </ul>
-            </div>
-        </nav>
+            <Fragment>
+                <nav>
+                    {/* <Link className="navbar-brand" to="/"></Link> */}
+                    <div className="nav-wrapper blue-grey">
+                        <ul className="right">
+                            {this.renderLinks()}
+                        </ul>
+                    </div>
+                </nav>
+            </Fragment>
+            
         )
     }
 }

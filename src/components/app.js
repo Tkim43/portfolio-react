@@ -1,18 +1,20 @@
 import React from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize';
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom';
 import Header from './header.js';
+import NotFound from './not-found.js'
 import Nav from './nav.js'
 
 const App = () => (
     <div>
         <Nav/>
-    <Router>
+        <div>
         <Switch>
-            <Route exact path="/" component={Header}/>
+            <Route path="/" exact component={Header}/>
+            <Route path="/404" component={NotFound}/>
         </Switch>
-    </Router>
+        </div>
     </div>
 );
 

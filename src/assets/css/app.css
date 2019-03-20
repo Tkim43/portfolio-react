@@ -2,11 +2,10 @@ body {
     margin: 0;
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+/* font-family: 'Over the Rainbow', cursive;
+font-family: 'Lilita One', cursive;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Viga', sans-serif; */

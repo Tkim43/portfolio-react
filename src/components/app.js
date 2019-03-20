@@ -1,21 +1,22 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize';
 import {Route, Switch} from 'react-router-dom';
-import Header from './header.js';
+import Main from './main.js';
 import NotFound from './not-found.js'
+import Work from './work.js'
 import Nav from './nav.js'
+import '../assets/css/app.css'
 
 const App = () => (
-    <div>
+    <Fragment>
         <Nav/>
-        <div>
         <Switch>
-            <Route path="/" exact component={Header}/>
+            <Route path="/" exact component={Main}/>
+            <Route path="/work" exact component={Work}/>
             <Route path="/404" component={NotFound}/>
         </Switch>
-        </div>
-    </div>
+    </Fragment>
 );
 
 export default App;

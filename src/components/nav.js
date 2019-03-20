@@ -1,5 +1,6 @@
 import React,{Component, Fragment} from 'react';
 import {Link} from 'react-router-dom';
+import '../assets/css/nav.css'
 
 class Nav extends Component{
     state={
@@ -8,10 +9,10 @@ class Nav extends Component{
                 text: 'Home',
                 to: '/'
             },
-            // {
-            //     text: 'About',
-            //     to: '/'
-            // },
+            {
+                text: 'Work',
+                to: '/'
+            },
             // {
             //     text: 'Education',
             //     to: '/'
@@ -67,7 +68,7 @@ class Nav extends Component{
             <Fragment>
                 <nav>
                     {/* <Link className="navbar-brand" to="/"></Link> */}
-                    <div className="nav-wrapper blue-grey">
+                    <div className="nav-wrapper blue-grey darken-3">
                         <ul className="right">
                             {this.renderLinks()}
                         </ul>
